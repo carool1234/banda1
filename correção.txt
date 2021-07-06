@@ -1,0 +1,23 @@
+Exercício 2 para prova de banco de dados SQL
+
+1 ) Selecionar os nomes dos alunos que comecem a letra L
+
+select nome from alunos where nome like '%l';
+
+2 ) selecionar o nome dos alunos que comecem a letra A e morem no bairro lins
+
+select nome from alunos where nome like '%a' and bairro = "lins";
+
+3 ) selecionar o nome a turma e mensalidade mostranado 10% da mensalidade
+
+select nome,turma,mensalidade * 10 / 100 from alunos;
+
+
+4 ) selecionar o nome a turma e mensalidade mostranado um acrescimo de 10% da mensalidade
+
+select nome,turma,mensalidade * 10 / 100 + mensalidade from alunos;
+
+5 )  selecionar o nome a turma e mensalidade mostranado um desconto de 100 da mensalidade dos alunos
+que moram no lins
+
+select nome,turma,mensalide - 100 from alunos where bairro = "lins";
